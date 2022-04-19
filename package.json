@@ -7,7 +7,11 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,vue,ts} --fix",
-    "lint:create": "eslint --init"
+    "lint:create": "eslint --init",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix"
   },
   "dependencies": {
     "ant-design-vue": "^3.1.1",
@@ -23,7 +27,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.6.0",
+    "husky": "^7.0.0",
     "less": "^4.1.2",
+    "lint-staged": "^12.3.8",
     "prettier": "^2.6.2",
     "standard": "^16.0.4",
     "typescript": "^4.5.4",
