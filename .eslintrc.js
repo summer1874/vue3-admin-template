@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'standard',
     'plugin:vue/vue3-recommended',
-    './.eslintrc-auto-import.json'
+    './.eslintrc-auto-import.json',
+    'plugin:prettier/recommended'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -14,17 +15,12 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
-  plugins: [
-    'vue',
-    '@typescript-eslint'
-  ],
-  rules: {
-  },
+  plugins: ['vue', '@typescript-eslint'],
+  rules: {},
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
     withDefaults: 'readonly'
   }
-
 }

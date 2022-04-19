@@ -50,16 +50,11 @@ export default defineConfig({
       imports: [
         'vue',
         {
-          [antNonComponentModule]: [
-            ['$message', 'antMessage']
-          ]
+          [antNonComponentModule]: [['$message', 'antMessage']]
         },
         {
-          [antNonComponentModule]: [
-            ['$notification', 'antNotification']
-          ]
+          [antNonComponentModule]: [['$notification', 'antNotification']]
         }
-
       ],
       // 可以选择auto-import.d.ts生成的位置，使用ts建议设置为'src/auto-import.d.ts'
       dts: autoImportDts, // 配置文件生成位置
@@ -71,6 +66,8 @@ export default defineConfig({
     })
   ],
   server: {
-    port: PORT // 指定开发服务器端口。注意：如果端口已经被使用，Vite 会自动尝试下一个可用的端口，所以这可能不是开发服务器最终监听的实际端口。
+    port: PORT, // 指定开发服务器端口。注意：如果端口已经被使用，Vite 会自动尝试下一个可用的端口，所以这可能不是开发服务器最终监听的实际端口。
+    open: true, // 设置服务启动时是否自动打开浏览器
+    cors: true // 允许跨域
   }
 })

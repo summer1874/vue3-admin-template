@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-const handleClick = ():void => {
+const handleClick = (): void => {
   antMessage.info(123)
   antNotification.open({
     message: 'Notification Title',
     description:
-          'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+      'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
     onClick: () => {
       console.log('Notification Clicked!')
     }
@@ -19,15 +19,8 @@ const handleClick = ():void => {
     <a-breadcrumb-item><a href="">Application List</a></a-breadcrumb-item>
     <a-breadcrumb-item>An Application</a-breadcrumb-item>
   </a-breadcrumb>
-  <a-button
-    ref="name"
-    @click="handleClick"
-  >
-    123
-  </a-button>
-  <a-button type="primary">
-    Primary Button
-  </a-button>
+  <a-button ref="name" @click="handleClick"> 123 </a-button>
+  <a-button type="primary"> Primary Button </a-button>
 </template>
 
 <style lang="less">
