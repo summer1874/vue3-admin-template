@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { message } from 'ant-design-vue'
+// import { message } from 'ant-design-vue'
 // import { MessageInstance } from 'ant-design-vue/lib/message'
 // import 'ant-design-vue/es/message/style/css'
 
