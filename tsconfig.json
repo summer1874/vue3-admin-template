@@ -8,9 +8,12 @@
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"]
+  },
+  "editorOptions": {
+    "isolatedModules": true,
+    "types": ["vite/client", "jest"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

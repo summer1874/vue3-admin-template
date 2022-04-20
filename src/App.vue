@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import TestVue from '@/components/Test.vue'
 const handleClick = (): void => {
   antMessage.info(123)
   antNotification.open({
@@ -13,6 +14,7 @@ const handleClick = (): void => {
 </script>
 
 <template>
+  <TestVue />
   <a-breadcrumb>
     <a-breadcrumb-item>Home</a-breadcrumb-item>
     <a-breadcrumb-item><a href="">Application Center</a></a-breadcrumb-item>

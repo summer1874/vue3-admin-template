@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     ABreadcrumb: typeof import('ant-design-vue/es')['Breadcrumb']
     ABreadcrumbItem: typeof import('ant-design-vue/es')['BreadcrumbItem']
     AButton: typeof import('ant-design-vue/es')['Button']
+    Test: typeof import('./components/Test.vue')['default']
   }
 }
 
