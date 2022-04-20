@@ -13,7 +13,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-customizable"
+      "path": "./node_modules/cz-customizable"
     }
   },
   "lint-staged": {
