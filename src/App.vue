@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 import TestVue from '@/components/Test.vue'
 const handleClick = (): void => {
-  // antMessage.info(123)
-  // antNotification.open({
-  //   message: 'Notification Title',
-  //   description:
-  //     'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-  //   onClick: () => {
-  //     console.log('Notification Clicked!')
-  //   }
-  // })
+  antMessage.info(123)
+  antNotification.open({
+    message: 'Notification Title',
+    description:
+      'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+    onClick: () => {
+      console.log('Notification Clicked!')
+    }
+  })
 }
 </script>
 
