@@ -60,7 +60,7 @@ export default defineConfig({
       // 可以选择auto-import.d.ts生成的位置，使用ts建议设置为'src/auto-import.d.ts'
       dts: autoImportDts, // 配置文件生成位置
       eslintrc: {
-        enabled: false, // Default `false`
+        enabled: true, // Default `false`
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
         globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       }
