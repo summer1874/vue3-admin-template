@@ -17,24 +17,28 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+ build:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [16.14.2]
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      - name: Install & Build # 執行指令
-        run: |
-          npm install
+    - uses: actions/checkout@v2
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 7.0.0-rc.7
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: |
+          pnpm install
           npm run build 
-          
-      # Runs a single command using the runners shell
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # Settings > Secret 建立的 ACCESS_TOKEN，推同個 repo 的話可以不需要
-          BRANCH: main # deploy 到 gh-pages 這個分支
-          FOLDER: dist # build 後的資料夾
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # Settings > Secret 建立的 ACCESS_TOKEN，推同個 repo 的話可以不需要
+        BRANCH: main # deploy 到 gh-pages 這個分支
+        FOLDER: dist # build 後的資料夾
