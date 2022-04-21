@@ -11,7 +11,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.20.0
   '@vitejs/plugin-vue': ^2.3.1
   '@vue/test-utils': ^2.0.0-rc.20
-  ant-design-vue: ^3.2.0
+  ant-design-vue: 3.1.1
   babel-jest: 26.6.3
   commitizen: ^4.2.4
   consola: ^2.15.3
@@ -40,7 +40,7 @@ specifiers:
   vue-tsc: ^0.34.7
 
 dependencies:
-  ant-design-vue: 3.2.0_vue@3.2.33
+  ant-design-vue: 3.1.1_vue@3.2.33
   vue: 3.2.33
 
 devDependencies:
@@ -1481,8 +1481,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /ant-design-vue/3.2.0_vue@3.2.33:
-    resolution: {integrity: sha512-qY9f/kF9YqfzV/vJ9/GKj7s1wmpCuNwWVRyQ3qsG8P4Was/u5WTKG5hz9huUY/cNle2nBTDacvMBIOkfxPeUiQ==}
+  /ant-design-vue/3.1.1_vue@3.2.33:
+    resolution: {integrity: sha512-QcnESmPllfyPy4SavOlf1jml/bdmzCIcCgYWRwl0WKG5jbuuOQ0vhgfUCC2rI6R+84gb/qf4/0qoZnWcEyQziA==}
     peerDependencies:
       vue: '>=3.2.0'
     dependencies:
